@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="user">
+        <img src="josh.png" alt="">
+        <h3 class="name">Mar Joshua Paler</h3><br>
+        <p class="post">Bachelor of Science in Information Technology</p>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="home" id="home">
+
+    <h3>HI THERE !</h3>
+    <h1>I'm<span> Mar Joshua Paler</span></h1>
+    <div class="change">
+        <span class="info">Student</span>
+    </div><br><br>
+   
+    <div class="socmed">
+        <a href="#"><img src="facebook.png" alt=""></a>
+        <a href="#"><img src="instagram.png" alt=""></a>
+        <a href="#"><img src="youtube.png" alt=""></a>
+        <a href="#"><img src="tiktok.png" alt=""></a>
+        <a href="#"><img src="twitter.png" alt=""></a>
+    </div><br><br>
+    
+    <a href="#about"><button class="btn">About me</button></a>
+</section>
+
+<section class="about" id="about">
+    <h1 class="heading"><span> About </span> Me </h1>
+    <div class="row">
+        <div class="info">
+            <h3><span>Name :</span> Mar Joshua Paler </h3>
+            <h3><span>Address :</span> Abualan San Juan Abra </h3>
+            <h3><span>Birthdate :</span> November 25 </h3>
+            <h3><span>Gender :</span> Male </h3>
+            <h3><span>Country :</span> Philippines </h3><br>
+            <h2>Education</h2>
+        </div> 
+        <div class="counter">
+            <div class="box">
+                <span>Elementary</span>
+                <h3>Alimosgan Elementary School<p>Abualan, San Juan, Abra</p></h3>
+
+            </div>
+
+            <div class="box">
+                <span>Secondary</span>
+                <h3>Sister of Mary School(Boystown)<p>Adlas, Silang, Cavite</p>
+                </h3>
+            </div>
+
+            <div class="box">
+                <span>Tertiary</span>
+                <h3>Abra State Institute of Sciences and Technology<p>Main Campus,lagangilang Abra</p>
+                </h3>
+            </div>
+        </div>   
+    </div>
+</section>
+
+<section class="activities" id="activities">
+<h1 class="heading"> My <span> Activities </span></h1>
+<div class="box-container">
+    <center><a href="click.html"><button class="box">Onclick</button></a>
+    <a href="output.html"><button class="box">Javascript Output</button></a>
+    <a href="events.html"><button class="box">HTML Events</button></a>
+    <a href="LOGIN.html"><button class="box">Login</button></a>
+    <a href="calcu.html"><button class="box">Calculator</button></a>
+    <a href="BOOK.HTML"><button class="box">CSS Tutorial Book</button></a>
+    <a href="box.html"><button class="box">Box Model</button></a>
+    <a href="cryptopography.html"><button class="box">Web Typography</button></a></center>
+</div>
+</section>
+<section class="contact" id="contact">
+    <h1 class="heading"> Contact <span> Me </span></h1>
+    <div class="row">
+        <div class="content">
+            <h3 class="title">Contact Info</h3>
+            <div class="info">
+                <h3><span><img src="mail.png" alt=""></span>  marjoshua@gmail.com</h3>
+                <h3><span><img src="phone.png" alt=""></span>  09876543210</h3>
+                <h3><span><img src="phone.png" alt=""></span>  09876543210</h3>
+                <h3><span><img src="location.png" alt=""></span>  Abra, Philippines</h3>
+            </div>
+        </div>
+        <form action="">
+            <input type="text" placeholder="Name" class="box">
+            <input type="email" placeholder="Email" class="box">
+            <input type="text" placeholder="Phone Number" class="box">
+            <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Message"></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    
+    </div>
+
+</section>
+<script>
+    const text = document.querySelector('text');
+
+    const autoTextChanger = () => {
+        setTimeout(() => {
+            text.innerHTML = "Developer"
+        }, 0);
+        setTimeout(() => {
+            text.innerHTML = "HIGIGr"
+        }, 5000);
+        setTimeout(() => {
+            text.innerHTML = "HUHUH"
+        }, 10000);
+    }
+
+    autoTextChanger();
+
+    setInterval(autoTextChanger,15000);
+</script>
+
+
+</body>
+
+</html>

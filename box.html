@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<a href="index.html#activities"><ins>Back to Portfolio</ins></a><br><br>
+
+<head>
+    <style>
+
+        h1 {
+            font-size: 50px;
+            color: black;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+
+        input {
+            border: 3px solid forestgreen;
+            width: 200px;
+            padding: 10px 40px;
+            border-radius: 50px;
+            text-align: center;
+            color: black;
+            font-size: 15px;
+        }
+
+
+        button {
+            background-color: blue;
+            color: white;
+            width: 283px;
+            border-radius: 50px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border: 3px solid forestgreen;
+            background-color: gold;
+            color: black;
+            border: solid orange;
+        }
+
+        button:active {
+            background-color: orangered;
+            color: yellow;
+            border: solid red;
+        }
+        .container{
+            border: 2px solid lime;
+            width: 400px;
+            background-color: rgb(4, 247, 77);
+            border-radius: 30px;
+            box-shadow: 10px 5px 5px gray;
+            margin-top: 80px;
+        }
+        img{
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding:40px;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        
+        <div class="container">
+        <img src="mar.png" class="img">
+        <h1>Personal Info.</h1>
+        <table>
+            
+            <input id="myFirst" type="text" placeholder="First Name" onkeydown="count()" /><br><br>
+            <input id="myLast" type="text" placeholder="Last Name" onkeydown="count()" /><br><br>
+            <input id="myBirth" type="text" placeholder="Birth Year" /><br><br>
+
+            <button onclick="sub()">SUBMIT</button><br><br>
+            <h2>First Name is pressed <span id="count">0</span> Times</h2>
+            <h2>Your age is <span id="myBirth1">0</span></h2>
+        </table>
+        </div>
+    </center>
+    <script>
+
+        function count() {
+            var count = document.getElementById("count").innerHTML;
+
+            document.getElementById("count").innerHTML = Number(count) + 1;
+        }
+        function sub() {
+            alert("Your Information is Saved")
+        }
+        var myBirth = document.getElementById("myBirth");
+        var myBirth1 = document.getElementById("myBirth1");
+        var y = 2023
+
+        myBirth.addEventListener("keyup", function () {
+            var val = myBirth.value;
+            myBirth1.innerText = (y - val);
+        });
+    </script>
+</body>
+
+</html>

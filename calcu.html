@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+   <a class="me" href="index.html#activities"><ins>Back to Portfolio</ins></a><br><br>
+<head>
+   <style>
+      body {
+         background-color: #3a4655;
+      }
+      .me{
+         color: #fff;
+      }
+
+      .calculator {
+         margin-top: 50px;
+         margin-left: 500px;
+         padding: 10px;
+         border-radius: 1em;
+         min-height: 400px;
+         width: 275px;
+         box-shadow: 0 0 30px black;
+      }
+
+      .display-box {
+         font-family: comic sans ms;
+         font-size: 40px;
+         background-color: white;
+         border: solid black 0.5px;
+         border-radius: 5px;
+         width: 128%;
+         height: 70px;
+         padding-right: 6px;
+         font-weight: 500;
+         text-align: right;
+         margin: 15px 0;
+      }
+
+      .btn {
+         font-family: comic sans ms;
+         font-size: 25px;
+         background-color: #808080;
+         color: #FFFF00;
+         border: 0;
+         width: 55px;
+         border-radius: 30px;
+         height: 55px;
+         transition: all 200ms ease;
+      }
+
+      .btn#equal {
+         height: 110px;
+         background-color: yellow;
+         color: red;
+      }
+
+      .btn#equal:hover {
+         background-color: red;
+         color: yellow;
+      }
+
+      .btn#col {
+
+         background-color: yellow;
+         color: red;
+      }
+
+      .btn#col:hover {
+         background-color: red;
+         color: yellow;
+      }
+
+      .btn:hover {
+         background-color: lime;
+         color: #3e4b5c;
+      }
+
+      .btn:active {
+         border: 1px solid black;
+         background-color: #3e4b5c;
+         color: lime;
+
+      }
+
+      img {
+         width: 100px;
+         height: 100px;
+         border-radius: 100%;
+         position: absolute;
+         top: 530px;
+         left: 50%;
+         transform: translateX(-50%);
+         background: #fff;
+      }
+   </style>
+   </style>
+</head>
+
+<body>
+   <table class="calculator">
+      <tr>
+         <td colspan="3"> <input class="display-box" type="text" id="result" readonly placeholder="0" disabled> </td>
+      </tr>
+      <tr>
+         <td> <input class="btn" type="button" value="AC" id="col" onclick="clearScreen()" /> </td>
+         <td> <input class="btn" type="button" value="&#247" id="col" onclick="display('/')" /> </td>
+         <td> <input class="btn" type="button" value="&#215" id="col" onclick="display('*')" /> </td>
+         <td> <input class="btn" type="button" value="&#9003" id="col" onclick="del()" /> </td>
+      </tr>
+      <tr>
+         <td> <input class="btn" type="button" value="7" onclick="display('7')" /> </td>
+         <td> <input class="btn" type="button" value="8" onclick="display('8')" /> </td>
+         <td> <input class="btn" type="button" value="9" onclick="display('9')" /> </td>
+         <td> <input class="btn" type="button" value="-" id="col" onclick="display('-')" /> </td>
+      </tr>
+      <tr>
+         <td> <input class="btn" type="button" value="4" onclick="display('4')" /> </td>
+         <td> <input class="btn" type="button" value="5" onclick="display('5')" /> </td>
+         <td> <input class="btn" type="button" value="6" onclick="display('6')" /> </td>
+         <td> <input class="btn" type="button" value="+" id="col" onclick="display('+')" /> </td>
+      </tr>
+      <tr>
+         <td> <input class="btn" type="button" value="1" onclick="display('1')" /> </td>
+         <td> <input class="btn" type="button" value="2" onclick="display('2')" /> </td>
+         <td> <input class="btn" type="button" value="3" onclick="display('3')" /> </td>
+         <td rowspan="2"> <input class="btn" type="button" id="equal" value="=" onclick="calculate()" /> </td>
+      </tr>
+      <tr>
+         <td> <input class="btn" type="button" value="0" onclick="display('0')" /> </td>
+         <td> <input class="btn" type="button" value="00" onclick="display('00')" /> </td>
+         <td> <input class="btn" type="button" value="." onclick="display('.')" /> </td>
+
+      </tr>
+
+   </table>
+   <script>
+      function clearScreen() {
+         document.getElementById("result").value = "";
+      }
+      function display(value) {
+         document.getElementById("result").value += value;
+      }
+      function calculate() {
+         var p = document.getElementById("result").value;
+         var q = eval(p);
+         document.getElementById("result").value = q;
+      }
+      function del() {
+         var text = document.getElementById("text");
+         result.value = result.value.slice(0, -1)
+      }
+   </script>
+   <img src="mar.png">
+</body>
+
+</html>
