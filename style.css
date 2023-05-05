@@ -1,8 +1,9 @@
 :root {
     --yellow: #f9ca24;
 }
+
 :before,
-:after{
+:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -73,7 +74,7 @@ section {
 }
 
 .btn:hover {
-    transform: scale(1.1);   
+    transform: scale(1.1);
     background: var(--yellow);
     color: #333;
 }
@@ -114,39 +115,53 @@ header .user img {
     margin-bottom: 1rem;
     border: .7rem solid var(--yellow);
 }
-header .user img:hover{
+
+
+header .user img:hover {
     transform: scale(1.1);
 }
+
 header .user .name {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    justify-content: center;
     color: var(--yellow);
-    border-right: 1px solid black;
-    animation: typing 5s steps(14) infinite alternate, blink 0.9s infinite;
+    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 2500ms linear infinite 2000ms;
+    font-weight: 800;
 }
-header .user .name:hover{
-    transform: scale(1.1);   
+    @keyframes reveal {
+        100% {
+            background-size: 300% 300%;
+        }
+    }
+
+    @keyframes glow {
+        40% {
+            text-shadow: 0 0 8px #fff;
+        }
+    }
 }
 
-@keyframes typing {
-    from{
-        width: 0;
-        visibility: hidden;
-    }
-    to { width: 100%; }
+
+header .user .name:hover {
+    transform: scale(1.1);
 }
-@keyframes blink{
-    50%{ border-color: transparent; }
-    100%{ border-color: black; }
-}
+
 
 header .user .post {
     font-size: 2rem;
     color: #eee;
 }
-header .user .post:hover{
-    transform: scale(1.1);   
+
+header .user .post:hover {
+    transform: scale(1.1);
 }
 
 header .navbar {
@@ -173,6 +188,7 @@ header .navbar ul li a:hover {
     background: var(--yellow);
     color: #333;
 }
+
 header .navbar ul li a:active {
     background: #0F0;
     color: #333;
@@ -195,7 +211,7 @@ header .navbar ul li a:active {
     justify-content: center;
     flex-flow: column;
     padding: 0 15rem;
-  
+
 }
 
 .home h3 {
@@ -208,18 +224,98 @@ header .navbar ul li a:active {
     font-size: 5rem;
     color: #fff;
 }
-.home h1 span{
+
+.home h1 span {
     color: var(--yellow);
 }
 
-.home .change .info{
-    position: relative;
-    font-size: 2.5rem;
-    color: #eee;
-    font-weight: 500;  
+.animation {
+    height: 30px;
+    overflow: hidden;
+    margin-left: 1rem;
 }
 
-.home .socmed a{
+.animation>div>div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display: inline-block;
+}
+
+.animation div:first-child {
+    animation: text-animation 10s infinite;
+}
+
+.first div {
+    color: #eee;
+    text-align: center;
+    font-size: 2.8rem;
+    letter-spacing: .4rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.second div {
+    color: #eee;
+    text-align: center;
+    font-size: 2.8rem;
+    letter-spacing: .4rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.third div {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #eee;
+    letter-spacing: .4rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes text-animation {
+    0% {
+        margin-top: 0;
+    }
+
+    10% {
+        margin-top: 0;
+    }
+
+    20% {
+        margin-top: -2.60rem;
+    }
+
+    30% {
+        margin-top: -2.60rem;
+    }
+
+    40% {
+        margin-top: -6.20rem;
+    }
+
+    60% {
+        margin-top: -6.20rem;
+    }
+
+    70% {
+        margin-top: -2.60rem;
+    }
+
+    80% {
+        margin-top: -2.60rem;
+    }
+
+    90% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+.home .socmed a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -227,6 +323,7 @@ header .navbar ul li a:active {
     height: 4rem;
     margin-right: 1rem;
 }
+
 .about .row {
     display: flex;
     align-items: center;
@@ -252,11 +349,13 @@ header .navbar ul li a:active {
     color: #eee;
     padding: 0 .5rem;
 }
+
 .about .row .info h2 {
     font-size: 3rem;
     text-align: center;
     color: #eee;
 }
+
 .about .row .counter {
     float: right;
     flex: 1 1 48rem;
@@ -265,25 +364,29 @@ header .navbar ul li a:active {
     justify-content: center;
     flex-wrap: wrap;
 }
-.about .row .counter .box{
+
+.about .row .counter .box {
     width: 22rem;
     height: 20.5rem;
     background: #222;
     text-align: center;
     padding: 1rem;
-    margin: 1rem;   
+    margin: 1rem;
 }
-.about .row .counter .box span{
+
+.about .row .counter .box span {
     font-size: 2.3rem;
     color: var(--yellow);
 }
-.about .row .counter .box h3{
+
+.about .row .counter .box h3 {
     padding-top: 2rem;
     font-size: 1.8rem;
     color: #fff;
 }
-.about .row .counter .box p{
-    padding-top:1rem;
+
+.about .row .counter .box p {
+    padding-top: 1rem;
 }
 
 .activities .box-container {
@@ -307,35 +410,41 @@ header .navbar ul li a:active {
     font-family: 'Ink Free';
     font-weight: 600;
 }
-.activities .box-container .box button{
+
+.activities .box-container .box button {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.activities .box-container .box:hover{
+
+.activities .box-container .box:hover {
     transform: scale(1.2);
     font-size: 2.5rem;
     background: var(--yellow);
     color: #333;
 }
-.contact .row{
+
+.contact .row {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
-.contact .row .content{
+
+.contact .row .content {
     flex: 1 1 30rem;
     padding: 4rem;
     padding-bottom: 0;
 }
-.contact .row form{
+
+.contact .row form {
     flex: 1 1 45rem;
     padding: 2rem;
     margin: 2rem;
     margin-bottom: 4rem;
 }
-.contact .row form .box{
+
+.contact .row form .box {
     padding: 1.5rem;
     margin: 1rem 0;
     background: #3333;
@@ -344,20 +453,24 @@ header .navbar ul li a:active {
     font-size: 1.7rem;
     width: 100%;
 }
-.contact .row form .box::placeholder{
+
+.contact .row form .box::placeholder {
     text-transform: capitalize;
 }
-.contact .row form .message{
+
+.contact .row form .message {
     height: 15rem;
     resize: none;
 }
-.contact .row .content .title{
+
+.contact .row .content .title {
     text-transform: uppercase;
     color: #fff;
     font-size: 3rem;
     padding-bottom: 2rem;
 }
-.contact .row .content .info h3{
+
+.contact .row .content .info h3 {
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -365,11 +478,7 @@ header .navbar ul li a:active {
     padding: 1rem 0;
     font-weight: normal;
 }
-.contact .row .content .info span{
+
+.contact .row .content .info span {
     padding: 0 .5rem;
 }
-
-
-
-
-
