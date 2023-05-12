@@ -352,40 +352,38 @@ header .navbar ul li a:active {
 
 .about .row .info h2 {
     font-size: 3rem;
-    text-align: center;
+    margin-left: 30rem;
     color: #eee;
 }
 
-.about .row .counter {
-    float: right;
-    flex: 1 1 48rem;
+.about .row .info .box {
+    float: left;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.about .row .counter .box {
+.about .row .info .box {
     width: 22rem;
-    height: 20.5rem;
+    height: 21rem;
     background: #222;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     margin: 1rem;
 }
 
-.about .row .counter .box span {
+.about .row .info .box span {
     font-size: 2.3rem;
     color: var(--yellow);
 }
 
-.about .row .counter .box h3 {
+.about .row .info .box h3 {
     padding-top: 2rem;
     font-size: 1.8rem;
     color: #fff;
 }
 
-.about .row .counter .box p {
+.about .row .info .box p {
     padding-top: 1rem;
 }
 
@@ -399,22 +397,16 @@ header .navbar ul li a:active {
 
 .activities .box-container .box {
     height: 20rem;
-    width: 16rem;
+    width: 20rem;
     border-radius: 1rem;
     margin: 2rem;
     overflow: hidden;
     background: #333;
     color: #eee;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     font-family: 'Ink Free';
     font-weight: 600;
-}
-
-.activities .box-container .box button {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 .activities .box-container .box:hover {
